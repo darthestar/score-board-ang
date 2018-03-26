@@ -7,3 +7,9 @@ body {
   min-height: 100%;
   font: 16px / 1 sans-serif;
 }
+
+.teams{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

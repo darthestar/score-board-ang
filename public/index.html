@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>y</title>
-    <link rel="stylesheet" href="/screen.css">
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
-  </body>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>y</title>
+  <link rel="stylesheet" href="./screen.css">
+</head>
+
+<body ng-app="scoreBoardApp" ng-controller="scoreBoardController">
+  <h1>Score Board</h1>
+  <section class="teams">
+  <div class="team-one">
+    <div>{{team[0].name}}</div>
+    <div>{{team[0].score}}</div>
+    <div>
+      <button ng-click="add(0)">Add</button>
+    </div>
+    <div>
+      <button ng-click="subtract(0)">Subtract</button>
+    </div>
+    <div>
+      <input type="text" ng-model="searchValue1">
+    </div>
+    <div>
+      <button ng-click="updateName(0,searchValue1)">Update Name</button>
+    </div>
+  </div>
+
+  <div class="team-two">
+      <div>{{team[1].name}}</div>
+      <div>{{team[1].score}}</div>
+      <div>
+        <button ng-click="add(1)">Add</button>
+      </div>
+      <div>
+        <button ng-click="subtract(1)">Subtract</button>
+      </div>
+      <div>
+        <input type="text" ng-model="searchValue2">
+      </div>
+      <div>
+        <button ng-click="updateName(1,searchValue2)">Update Name</button>
+      </div>
+    </div>
+</section>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="./main.js" charset="utf-8"></script>
+</body>
+
 </html>
